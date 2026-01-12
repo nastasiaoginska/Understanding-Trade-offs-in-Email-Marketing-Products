@@ -1,8 +1,5 @@
 # Understanding Trade-offs in Email Marketing Products  
 **Data-driven market landscape analysis using unsupervised data mining**
-
----
-
 ## Overview
 
 This project explores the **email marketing software market** through the lens of **perceived value (pros)** and **perceived pain points (cons)**.  
@@ -15,16 +12,12 @@ Using unsupervised data mining techniques, it aims to uncover:
 
 The result is a **market map**, a **competitive landscape**, and a set of **interpretable trade-off patterns** derived directly from customer-facing perceptions.
 
----
-
 ## Business Question
 
 > **How is the email marketing market structured by value propositions, pains, and trade-offs — and where is there room for a new product archetype?**
 
 This project intentionally avoids prediction.  
 Its goal is **structure discovery**, not forecasting.
-
----
 
 ## Data
 
@@ -43,7 +36,6 @@ Additional metadata (ratings, reviews, pricing, segments) exists but is not requ
 - Themes are consistent across products (good for comparison).
 - Themes are **categorical signals**, not detailed explanations (e.g. “Missing Features” does not specify *which* features).
 
----
 
 ## Methodology (CRISP-DM aligned)
 
@@ -57,8 +49,6 @@ Additional metadata (ratings, reviews, pricing, segments) exists but is not requ
 **Artifact:**  
 `feature_matrix_pruned` — products × themes (binary)
 
----
-
 ### 2. Similarity & Clustering (Market Archetypes)
 
 - Compute product similarity using **cosine similarity** over shared themes.
@@ -69,8 +59,6 @@ This produces:
 - natural **product archetypes**,
 - a **competitive map**,
 - interpretable cluster profiles.
-
----
 
 ### 3. Co-occurrence Analysis (Trade-offs)
 
@@ -89,8 +77,6 @@ using:
 
 High lift + meaningful support indicates **structural market patterns**, not coincidences.
 
----
-
 ## Key Findings
 
 ### Market core (dominant perceptions)
@@ -107,8 +93,6 @@ High lift + meaningful support indicates **structural market patterns**, not coi
 - Expensive (segment-dependent)
 - Limited Customization
 
----
-
 ### Structural market tension
 
 **Missing / Limited Features is a systemic pain**, not an isolated defect.
@@ -122,8 +106,6 @@ This reveals a recurring market trade-off:
 
 > **Ease of use is often achieved at the cost of depth and control.**
 
----
-
 ### CON–CON “pain bundles”
 
 Negative perceptions tend to cluster together:
@@ -133,8 +115,6 @@ Negative perceptions tend to cluster together:
 - Limited Features ↔ Limited Customization / Template Limitations  
 
 Products rarely suffer from just one constraint — they inherit **packages of limitations**.
-
----
 
 ### White space hypothesis
 
@@ -148,5 +128,3 @@ Based on clustering and co-occurrence patterns, the market appears underserved i
 > This white space often appears **adjacent to overcrowded segments**, not in empty territory — emerging from unresolved trade-offs rather than lack of demand.
 
 This is a **hypothesis**, not a claim of causality, and would require validation with deeper product-level and textual data.
-
----
