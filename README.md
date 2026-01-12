@@ -16,26 +16,25 @@ The result is a **market map**, a **competitive landscape**, and a set of **inte
 
 > **How is the email marketing market structured by value propositions, pains, and trade-offs — and where is there room for a new product archetype?**
 
-This project intentionally avoids prediction.  
-Its goal is **structure discovery**, not forecasting.
+This project intentionally avoids prediction. Its goal is **structure discovery**, not forecasting.
 
 ## Data
 
-**Unit of analysis:** product (one row per product)
+**Unit of analysis:** one product (one row per product).
 
-**Key fields used:**
+**Fields used in the analysis:**
 - `name`
-- `pros_themes` — predefined positive themes (semicolon-separated)
-- `cons_themes` — predefined negative themes (semicolon-separated)
+- `pros_themes` — predefined positive themes selected by users (semicolon-separated)
+- `cons_themes` — predefined negative themes selected by users (semicolon-separated)
 
-Additional metadata (ratings, reviews, pricing, segments) exists but is not required for the core unsupervised analysis.
+Additional metadata (ratings, number of reviews, pricing, market segment) is available but not required for the core unsupervised analysis.
 
-### Important note on data semantics
+### Notes on data semantics
 
-- Pros and cons are selected from a **controlled vocabulary** on the source platform.
-- Themes are consistent across products (good for comparison).
-- Themes are **categorical signals**, not detailed explanations (e.g. “Missing Features” does not specify *which* features).
-
+- Pros and cons are chosen from a **predefined set of themes** on the source platform.
+- This ensures **consistent labeling across products**, which makes cross-product comparison reliable.
+- Themes represent **high-level signals**, not detailed explanations.  
+  For example, *“Missing Features”* indicates perceived lack of functionality but does not specify which exact features are missing.
 
 ## Methodology (CRISP-DM aligned)
 
@@ -118,13 +117,6 @@ Products rarely suffer from just one constraint — they inherit **packages of l
 
 ### White space hypothesis
 
-Based on clustering and co-occurrence patterns, the market appears underserved in the space combining:
+The results indicate potential whitespace around value combinations that are rarely delivered together in the current market.
 
-- **Ease of use + deep control over output**
-- **Design-first workflows + HTML-safe constraints**
-- **Fast creation + predictable rendering**
-- **Not a classic ESP, but production-ready email output**
-
-> This white space often appears **adjacent to overcrowded segments**, not in empty territory — emerging from unresolved trade-offs rather than lack of demand.
-
-This is a **hypothesis**, not a claim of causality, and would require validation with deeper product-level and textual data.
+While individual dimensions such as ease of use, design focus, or fast creation are well represented, their combination with deeper control and predictable output appears structurally constrained by existing trade-offs.
